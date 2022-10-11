@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO List</title>
+    <!--Bootstrap Link-->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.bundle.min.js"></script>
+    <!--CSS file-->
+    <link rel="stylesheet" href="styleSheet.css">
+</head>
+
+<body onload="updateTable()">
+    <div class="mt-5 container">
+        <h1 class="text-center">TODO List</h1>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title" placeholder="Enter Title" onfocus="this.value=''">
+            <span style="color: red;" id="error1"></span>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Discription</label>
+            <textarea class="form-control" id="discription" rows="3" placeholder="Enter Discription" onfocus="this.value=''"></textarea>
+            <span style="color: red;" id="error2"></span>
+        </div>
+        <button type="submit" class="btn btn-info" id="add">Add to List</button>
+        <button type="submit" class="btn btn-info" id="clear" onclick="clearList()">Clear List</button>
+
+        <hr>
+        <div class="mt-3">
+            <h3>Items List</h3>
+            <table class="table mt-3">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Discription</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tablebody"></tbody>
+            </table>
+        </div>
+    </div>
+    <!--JavaScript file-->
+    <script src="scriptSheet.js"></script>
+</body>
+
+</html>
